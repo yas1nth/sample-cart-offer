@@ -1,10 +1,13 @@
 package com.springboot;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.springboot.controller.AutowiredController;
 import com.springboot.controller.OfferRequest;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -18,6 +21,7 @@ import java.util.*;
 public class CartOfferApplicationTests {
 
 	private final ObjectMapper mapper = new ObjectMapper();
+
 
 	// ✅ Helper Method: Mock User Segment API
 	public void mockUserSegment(int userId, String segment) throws Exception {
